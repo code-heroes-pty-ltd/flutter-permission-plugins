@@ -38,16 +38,9 @@ dependencies {
     implementation 'com.android.support:support-compat:27.1.1'
 }
 
-// NOTE: There appears to a conflict between the android support packages and multidex. We do this to force a particular version.
-// We get version conflicts if we don't do this.
-// See: https://github.com/flutter/flutter/issues/14020
-subprojects {
-    project.configurations.all {
-        resolutionStrategy.eachDependency { details ->
-            if (details.requested.group == 'com.android.support'
-                    && !details.requested.name.contains('multidex') ) {
-                details.useVersion "27.1.1"
-            }
-        }
+// https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview/issues/205#issuecomment-371669478
+configurations.all {
+    resolutionStrategy {
+        force 'com.android.support:support-v4:27.1.0'
     }
 }
