@@ -336,14 +336,7 @@ public class LocationPermissionsPlugin implements MethodCallHandler, StreamHandl
 
   @SuppressWarnings("deprecation")
   private static boolean isLocationServiceEnabled(Context context) {
-    if (Build.VERSION.SDK_INT >= 28) {
-      final LocationManager locationManager = context.getSystemService(LocationManager.class);
-      if (locationManager == null) {
-        return false;
-      }
-
-      return locationManager.isLocationEnabled();
-    } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
       final int locationMode;
 
       try {
