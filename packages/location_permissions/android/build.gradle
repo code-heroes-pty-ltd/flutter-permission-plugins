@@ -34,13 +34,7 @@ android {
 }
 
 dependencies {
+    implementation 'com.android.support:support-v4:27.1.0'
     implementation 'com.android.support:support-annotations:28.0.0'
     implementation 'com.android.support:support-compat:27.1.1'
-}
-
-// https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview/issues/205#issuecomment-371669478
-configurations.all {
-    resolutionStrategy {
-        force 'com.android.support:support-v4:27.1.0'
-    }
 }
