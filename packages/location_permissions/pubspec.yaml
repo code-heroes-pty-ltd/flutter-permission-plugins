@@ -4,10 +4,10 @@ description: Location permission plugin for Flutter. This plugin provides a cros
 version: 2.0.1
 authors:
   - Baseflow <hello@baseflow.com>
-homepage: https://github.com/BaseflowIT/flutter-permission-plugins/tree/develop/packages/location_permissions 
+homepage: https://github.com/BaseflowIT/flutter-permission-plugins/tree/develop/packages/location_permissions
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.0.0-dev.68.0 <3.0.0"
 
 dependencies:
   flutter:
